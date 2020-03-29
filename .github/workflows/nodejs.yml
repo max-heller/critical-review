@@ -26,7 +26,7 @@ jobs:
       uses: golfzaptw/action-connect-ovpn@master
       id: connect_vpn
       with:
-        PING_URL: 'https://bitbucket.brown.edu'
+        PING_URL: 'perfmon.cs.brown.edu'
         FILE_OVPN: '.github/vpn/config.ovpn'
         SECRET: ${{ secrets.SECRET_USERNAME_PASSWORD }}
         TLS_KEY: ${{ secrets.TLS_KEY }}
