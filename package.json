@@ -4,6 +4,7 @@
     "description": "Brown Critical Review rewrite",
     "main": "dist/app.js",
     "scripts": {
+        "build": "tsc --build tsconfig.json",
         "start": "tsc --build tsconfig.json && node dist/app.js",
         "test": "jest"
     },
