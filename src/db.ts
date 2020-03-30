@@ -1,5 +1,10 @@
 import { createConnection } from "typeorm";
+import Course from "./models/course";
+import Department from "./models/department";
+import Professor from "./models/professor";
 import Review from "./models/review";
+import Section from "./models/section";
+import Staff from "./models/staff";
 
 require("dotenv").config();
 
@@ -11,8 +16,9 @@ export function connectDB() {
         username: process.env.DB_USERNAME,
         password: process.env.DB_PASSWORD,
         database: process.env.DB_DATABASE,
-        entities: [Review],
+        entities: [Course, Department, Professor, Review, Section, Staff],
         synchronize: true,
+        dropSchema: true,
         logging: false,
     });
 }
