@@ -18,15 +18,27 @@
         "url": "https://github.com/mxheller/critical-review/issues"
     },
     "homepage": "https://github.com/mxheller/critical-review#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "brown-shib": "git+https://bitbucket.brown.edu/scm/node/shib.git",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.0",
+        "fs": "0.0.1-security",
+        "https": "^1.0.0",
+        "passport": "^0.4.1",
+        "selfsigned": "^1.10.7"
+    },
     "devDependencies": {
+        "@types/body-parser": "^1.19.0",
         "@types/express": "^4.17.3",
+        "@types/express-session": "^1.17.0",
         "@types/jest": "^25.1.4",
+        "@types/node": "^13.9.5",
+        "@types/passport": "^1.0.3",
         "jest": "^25.2.3",
         "ts-jest": "^25.2.1",
         "tslint": "^6.1.0",
         "typescript": "^3.8.3"
-    },
-    "dependencies": {
-        "express": "^4.17.1"
     }
 }
