@@ -16,6 +16,13 @@ jobs:
     strategy:
       matrix:
         node-version: [8.x, 13.x]
+        
+    env:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_DATABASE: critical_review
+      DB_USERNAME: user
+      DB_PASSWORD: pass
 
     steps:
     - uses: actions/checkout@v2
