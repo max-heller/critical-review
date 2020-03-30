@@ -3,7 +3,9 @@ import express from "express";
 import session from "express-session";
 import { readFileSync as readFile } from "fs";
 import https from "https";
+import "reflect-metadata";
 import auth from "./auth";
+import { db } from "./db";
 
 dotenv.config();
 
@@ -31,4 +33,6 @@ if (process.env.MODE == "development") {
 }
 const server = https.createServer(keys, app);
 const port = process.env.HOSTNAME == "localhost" ? 8443 : 443;
-server.listen(port, () => console.log(`server is listening on ${port}`));
+db.then((_) => {
+    server.listen(port, () => console.log(`server is listening on ${port}`));
+}).catch((err) => console.error(err));
